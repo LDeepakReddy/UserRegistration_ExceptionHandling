@@ -24,7 +24,7 @@ public class UserRegistration {
         } else if (lastName.length() == 0) {
             throw new UserRegistrationException("Invalid Input", UserRegistrationException.ExceptionType.EMPTY);
         }
-        String regex ="^[A-Z]{1}[a-z]{3,}$";
+        String regex = "^[A-Z]{1}[a-z]{3,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(lastName);
         return matcher.matches();
